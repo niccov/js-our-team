@@ -9,10 +9,8 @@ Stampare le stesse informazioni su DOM sottoforma di stringhe
 _______________________________________________________________________________________________
 */
 
-let descriptionOne = document.getElementById("descrizione-1");
-let descriptionTwo = document.getElementById("descrizione-2");
-let descriptionThree = document.getElementById("descrizione-3");
-let descriptionFour = document.getElementById("descrizione-4");
+let description = document.getElementById("descrizione");
+
 
 //MILESTONE 0: Creo un array con all'interno 6 oggetti con Keys: nome, cognome, ruolo e foto 
 const workers = [
@@ -70,11 +68,18 @@ for(let i = 0; i < workers.length; i++){
 
 for(let i = 0; i < workers.length; i++){
 
-    descriptionOne.innerText = "Nome: " + workers[i].nome;
+    let liNameElement = document.createElement("li");
 
-    descriptionTwo.innerText = "Cognome: " + workers[i].cognome;
+    liNameElement.innerHTML = workers[i].nome;
 
-    descriptionThree.innerText = "Ruolo: " + workers[i].ruolo;
+    description.append(liNameElement);
+    
 
-    descriptionFour.innerText = "Foto: " + workers[i].foto;
+
+    //descriptionTwo.innerText = "Cognome: " + workers[i].cognome;
+
+    //descriptionThree.innerText = "Ruolo: " + workers[i].ruolo;
+
+    //descriptionFour.innerText = "Foto: " + workers[i].foto;
 }
+
