@@ -68,11 +68,11 @@ for(let i = 0; i < workers.length; i++){
 
 for(let i = 0; i < workers.length; i++){
 
-    let liNameElement = document.createElement("li");
+    let liElement = document.createElement("li");
 
-    liNameElement.innerHTML = workers[i].nome;
+    liElement.innerHTML = workers[i].nome + workers[i].cognome + workers[i].ruolo + workers[i].foto;
 
-    description.append(liNameElement);
+    description.append(liElement);
     
 
 
